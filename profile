@@ -63,8 +63,8 @@ EOF
 # Autocompletion for a bunch of stuff
 source /opt/local/etc/bash_completion
 source /opt/local/etc/bash_completion.d/git # git
-complete -C ~/bin/bash_completion/rake -o default rake
-complete -C ~/bin/bash_completion/capistrano -o default cap
+complete -C ~/dotfiles/tab_completion/rake -o default rake
+complete -C ~/dotfiles/tab_completion/capistrano -o default cap
 
 # Go to the Projects folder, probably where I start most of my terminals
 cd ~/Projects
