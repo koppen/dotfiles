@@ -48,7 +48,7 @@ alias ls='ls -G'
 
 # Command to open a new Terminal tab.
 # From http://tomafro.net/2009/08/tip-open-new-tab-in-osx-terminal
-tab () {
+ttab () {
   osascript 2>/dev/null <<EOF
     tell application "System Events"
       tell process "Terminal" to keystroke "t" using command down
@@ -59,6 +59,24 @@ tab () {
     end tell
 EOF
 }
+
+# Command to open a new iTerm tab.
+itab () {
+  osascript 2>/dev/null <<EOF
+		tell application "iTerm"
+			tell the first terminal
+				launch session "Default Session"
+				tell the last session
+					write text "cd $PWD"
+					write text "$*"
+				end tell
+			end tell
+		end tell
+EOF
+}
+
+# Single command to launch a Rails project
+alias edit_rails='itab autospec && itab tail -f log/test.log && itab tail -f log/development.log && itab script/server && mate .'
 
 # Autocompletion for a bunch of stuff
 source /opt/local/etc/bash_completion
