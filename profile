@@ -16,6 +16,9 @@ export PATH="/opt/local/lib/postgresql84/bin:$PATH"
 # branch name into the prompt.
 export PS1='\[\e[1m\]\w\[\e[m\]$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo " (\[\033[00m\]$(git branch | grep ^*|sed s/\*\ \//))"; fi) \$\[\033[00m\] '
 
+
+export PS1='\n\[\e[1m\]\w\[\e[m\]$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo " (\[\033[00m\]$(git branch | grep ^*|sed s/\*\ \//))"; fi) \n\$\[\033[00m\] '
+
 # Don't store repeated lines in history
 export HISTCONTROL="ignoredups"
 
