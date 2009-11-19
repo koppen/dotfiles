@@ -63,6 +63,24 @@ ttab () {
 EOF
 }
 
+# Command to open a new iTerm window.
+iterm () {
+  osascript 2>/dev/null <<EOF
+	  tell application "System Events"
+	    tell process "iTerm" to keystroke "n" using command down
+		end
+
+		tell application "iTerm"
+			tell the last terminal
+				tell the last session
+					write text "cd $PWD"
+					write text "$*"
+				end tell
+			end tell
+		end tell
+EOF
+}
+
 # Command to open a new iTerm tab.
 itab () {
   osascript 2>/dev/null <<EOF
