@@ -42,6 +42,7 @@ alias sc='script/console'
 alias sg='script/generate'
 alias at='autotest'
 alias as='autospec'
+alias migrate='rake db:migrate && rake db:schema:dump && rake db:test:prepare'
 
 # Colorful ls
 alias ls='ls -G'
