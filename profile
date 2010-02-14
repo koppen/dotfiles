@@ -83,7 +83,7 @@ EOF
 itab () {
   osascript 2>/dev/null <<EOF
 		tell application "iTerm"
-			tell the first terminal
+			tell the last terminal
 				launch session "Default Session"
 				tell the last session
 					write text "cd $PWD"
@@ -99,11 +99,15 @@ alias edit_rails='git fetch origin && itab autospec && itab tail -f log/test.log
 
 # Git helpers
 alias grc='git rebase --continue'
-alias mate_unmerged="git st | grep unmerged | awk '{print \$3}' | while read line; do mate \$line; done"
+alias mate_unmerged="git st | grep \"unmerged\|both modified\" | awk -F : '{print \$2}' | while read line; do mate \$line; done"
 
 # Autocompletion for a bunch of stuff
-source /opt/local/etc/bash_completion
-source /opt/local/etc/bash_completion.d/git # git
+if [ -f /opt/local/etc/bash_completion ]; then
+  source /opt/local/etc/bash_completion
+fi
+if [ -f /opt/local/etc/bash_completion.d/git ]; then
+  source /opt/local/etc/bash_completion.d/git
+fi
 complete -C ~/dotfiles/tab_completion/rake -o default rake
 complete -C ~/dotfiles/tab_completion/capistrano -o default cap
 
