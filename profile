@@ -111,5 +111,8 @@ fi
 complete -C ~/dotfiles/tab_completion/rake -o default rake
 complete -C ~/dotfiles/tab_completion/capistrano -o default cap
 
+# RVM
+if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+
 # Go to the Projects folder, probably where I start most of my terminals
 cd ~/Projects
