@@ -110,6 +110,7 @@ if [ -f /opt/local/etc/bash_completion.d/git ]; then
 fi
 complete -C ~/dotfiles/tab_completion/rake -o default rake
 complete -C ~/dotfiles/tab_completion/capistrano -o default cap
+complete -C "mite auto-complete" mite 
 
 # RVM
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
