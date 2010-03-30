@@ -115,5 +115,7 @@ complete -C "mite auto-complete" mite
 # RVM
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
-# Go to the Projects folder, probably where I start most of my terminals
-cd ~/Projects
+# Go to the Projects folder, probably where I need to start most my terminal sessions
+if [ `pwd` == `echo ~` ]; then
+	cd ~/Projects
+fi
