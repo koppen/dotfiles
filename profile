@@ -99,7 +99,7 @@ alias edit_rails='git fetch origin && itab autospec && itab tail -f log/test.log
 
 # Git helpers
 alias grc='git rebase --continue'
-alias mate_unmerged="git st | grep \"unmerged\|both modified\" | awk -F : '{print \$2}' | while read line; do mate \$line; done"
+alias mate_unmerged="git st | grep \"unmerged\|both modified\|both added\|added by them\" | awk -F : '{print \$2}' | while read line; do mate \$line; done"
 
 # Autocompletion for a bunch of stuff
 if [ -f /opt/local/etc/bash_completion ]; then
