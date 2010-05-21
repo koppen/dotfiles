@@ -101,6 +101,11 @@ alias edit_rails='git fetch origin && itab autospec && itab tail -f log/test.log
 alias grc='git rebase --continue'
 alias mate_unmerged="git st | grep \"unmerged\|both modified\|both added\|added by them\" | awk -F : '{print \$2}' | while read line; do mate \$line; done"
 
+
+# Sigh, Parallels...
+alias prl_start='sudo killall -CONT prl_disp_service'
+alias prl_stop='sudo killall -STOP prl_disp_service'
+
 # Autocompletion for a bunch of stuff
 if [ -f /opt/local/etc/bash_completion ]; then
   source /opt/local/etc/bash_completion
