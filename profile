@@ -96,6 +96,7 @@ EOF
 
 # Single command to launch a Rails project
 alias edit_rails='git fetch origin && itab autospec && itab tail -f log/test.log && itab tail -f log/development.log && itab script/server && mate .'
+alias rails3='rvm use 1.8.7%rails3'
 
 # Git helpers
 alias grc='git rebase --continue'
@@ -119,6 +120,9 @@ complete -C "mite auto-complete" mite
 
 # RVM
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+
+# Autojump <http://github.com/joelthelion/autojump/downloads>
+if [[ -s ~/dotfiles/autojump/.bash_rc ]] ; then source ~/dotfiles/autojump/.bash_rc ; fi
 
 # Go to the Projects folder, probably where I need to start most my terminal sessions
 if [ `pwd` == `echo ~` ]; then
