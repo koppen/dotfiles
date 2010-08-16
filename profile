@@ -107,6 +107,11 @@ alias mate_unmerged="git st | grep \"unmerged\|both modified\|both added\|added 
 alias prl_start='sudo killall -CONT prl_disp_service'
 alias prl_stop='sudo killall -STOP prl_disp_service'
 
+# Sigh, PeepOpen...
+alias peep_start='open /Applications/PeepOpen.app'
+alias peep_stop="kill \`ps ax | grep PeepOpen | grep -v grep | cut -d ' ' -f1\`"
+alias peep_restart='peep_stop; peep_start'
+
 # Autocompletion for a bunch of stuff
 if [ -f /opt/local/etc/bash_completion ]; then
   source /opt/local/etc/bash_completion
