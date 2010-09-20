@@ -24,6 +24,9 @@ export EDITOR='mate -w' # -w means wait for TextMate to close the file
 
 # Ease on manually debugging REST API services
 alias apicurl="curl -H 'Accept: application/xml' -H 'Content-Type: application/xml' "
+headers () {
+	curl --silent --output /dev/null -D /tmp/dumped_headers $1 && cat /tmp/dumped_headers && rm /tmp/dumped_headers
+}
 
 # PostgreSQL control
 alias pgstart="sudo -u postgres /opt/local/lib/postgresql84/bin/pg_ctl start -D /opt/local/var/db/postgresql84/defaultdb -l /var/log/postgresql/postgresql.log"
