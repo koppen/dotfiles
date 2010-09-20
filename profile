@@ -94,6 +94,17 @@ itab () {
 EOF
 }
 
+publish () {
+	ruby -e 'require "webrick"
+		server = WEBrick::HTTPServer.new({
+			:Port => 8081,
+			:DocumentRoot => ENV["PWD"],
+			:MimeTypes => WEBrick::HTTPUtils::DefaultMimeTypes.update({nil => "text/html"})
+		})
+		["INT", "TERM"].each { |signal| trap(signal) { server.shutdown } }
+		server.start'
+}
+
 # Single command to launch a Rails project
 alias edit_rails='git fetch origin && itab autospec && itab tail -f log/test.log && itab tail -f log/development.log && itab script/server && mate .'
 alias rails3='rvm use 1.8.7%rails3'
