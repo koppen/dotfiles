@@ -102,7 +102,7 @@ publish () {
 		server = WEBrick::HTTPServer.new({
 			:Port => 8081,
 			:DocumentRoot => ENV["PWD"],
-			:MimeTypes => WEBrick::HTTPUtils::DefaultMimeTypes.update({nil => "text/html"})
+			:MimeTypes => WEBrick::HTTPUtils::DefaultMimeTypes.update({nil => "text/html", "swf" => "application/x-shockwave-flash"})
 		})
 		["INT", "TERM"].each { |signal| trap(signal) { server.shutdown } }
 		server.start'
@@ -138,7 +138,10 @@ complete -C ~/dotfiles/tab_completion/capistrano -o default cap
 complete -C "mite auto-complete" mite 
 
 # RVM
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+if [[ -s ~/.rvm/scripts/rvm ]] ; then 
+	source ~/.rvm/scripts/rvm
+	rvm use system
+fi
 
 # Autojump <http://github.com/joelthelion/autojump/downloads>
 if [[ -s ~/dotfiles/autojump/.bash_rc ]] ; then source ~/dotfiles/autojump/.bash_rc ; fi
