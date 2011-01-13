@@ -116,6 +116,8 @@ alias rails3='rvm use 1.8.7%rails3'
 alias grc='git rebase --continue'
 alias mate_unmerged="git st | grep \"unmerged\|both modified\|both added\|added by them\" | awk -F : '{print \$2}' | while read line; do mate \$line; done"
 
+# Memcached
+alias memcached_stop="sudo kill `ps -A | grep /opt/local/bin/memcached | grep -v grep | grep -v daemondo | cut -d ' ' -f 1`"
 
 # Sigh, Parallels...
 alias prl_start='sudo killall -CONT prl_disp_service'
