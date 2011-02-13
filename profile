@@ -117,7 +117,7 @@ alias grc='git rebase --continue'
 alias mate_unmerged="git st | grep \"unmerged\|both modified\|both added\|added by them\" | awk -F : '{print \$2}' | while read line; do mate \$line; done"
 
 # Memcached
-alias memcached_stop="sudo kill \`ps -A | grep /opt/local/bin/memcached | grep -v grep | grep -v daemondo | cut -d ' ' -f 1\`"
+alias memcached_stop="sudo kill \`ps -A | grep /opt/local/bin/memcached | grep -v grep | grep -v daemondo | awk -F ' ' '{print \$1}'\`"
 
 # Sigh, Parallels...
 alias prl_start='sudo killall -CONT prl_disp_service'
@@ -125,8 +125,10 @@ alias prl_stop='sudo killall -STOP prl_disp_service'
 
 # Sigh, PeepOpen...
 alias peep_start='open /Applications/PeepOpen.app'
-alias peep_stop="kill \`ps ax | grep PeepOpen | grep -v grep | cut -d ' ' -f1\`"
+alias peep_stop="kill \`ps ax | grep PeepOpen | grep -v grep | awk -F ' ' '{print \$1}'\`"
 alias peep_restart='peep_stop; peep_start'
+
+alias redis_start='/opt/local/bin/redis-server /opt/local/etc/redis.conf'
 
 # Autocompletion for a bunch of stuff
 if [ -f /opt/local/etc/bash_completion ]; then
