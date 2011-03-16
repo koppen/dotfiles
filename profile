@@ -10,6 +10,10 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # Set path for PostgreSQL 8.4 usage, installed via MacPorts
 export PATH="/opt/local/lib/postgresql84/bin:$PATH"
 
+# Make sure my own small utils are available
+export PATH="$HOME/bin:$PATH"
+
+
 # Set a nice prompt
 # export PS1="\\e[1m\\u@\\h:\\w\\\$\\e[m "
 # Alternative prompt from http://blog.teksol.info/2009/01/12/productivity-tip-a-simple-change-to.html. Puts the git
