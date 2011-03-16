@@ -115,6 +115,7 @@ alias rails3='rvm use 1.8.7%rails3'
 # Git helpers
 alias grc='git rebase --continue'
 alias mate_unmerged="git st | grep \"unmerged\|both modified\|both added\|added by them\" | awk -F : '{print \$2}' | while read line; do mate \$line; done"
+alias git='hub' # https://github.com/defunkt/hub#readme
 
 # Memcached
 alias memcached_stop="sudo kill \`ps -A | grep /opt/local/bin/memcached | grep -v grep | grep -v daemondo | awk -F ' ' '{print \$1}'\`"
