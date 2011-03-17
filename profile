@@ -3,16 +3,12 @@ export LC_CTYPE=en_US.UTF-8
 
 # Set the path for DarwinPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-
 # Standard paths
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-
 # Set path for PostgreSQL 8.4 usage, installed via MacPorts
 export PATH="/opt/local/lib/postgresql84/bin:$PATH"
-
 # Make sure my own small utils are available
 export PATH="$HOME/bin:$PATH"
-
 
 # Set a nice prompt
 # export PS1="\\e[1m\\u@\\h:\\w\\\$\\e[m "
@@ -25,6 +21,15 @@ export HISTCONTROL="ignoredups"
 
 # I ♥ TextMate
 export EDITOR='mate -w' # -w means wait for TextMate to close the file
+
+# Tweak REE settings for faster tests
+# See http://www.rubyenterpriseedition.com/documentation.html#_garbage_collector_performance_tuning
+export RUBY_HEAP_MIN_SLOTS=500000
+export RUBY_HEAP_SLOTS_INCREMENT=250000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=50000000
+export RUBY_HEAP_FREE_MIN=500000
+
 
 # Ease on manually debugging REST API services
 alias apicurl="curl -H 'Accept: application/xml' -H 'Content-Type: application/xml' "
