@@ -8,7 +8,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # Set path for PostgreSQL 8.4 usage, installed via MacPorts
 export PATH="/opt/local/lib/postgresql84/bin:$PATH"
 # Make sure my own small utils are available
-export PATH="$HOME/bin:$PATH"
+export PATH="./bin:$HOME/bin:$PATH"
 
 # Set a nice prompt
 # export PS1="\\e[1m\\u@\\h:\\w\\\$\\e[m "
@@ -20,7 +20,7 @@ export PS1='\n\[\e[1m\]\w\[\e[m\]$(git branch &>/dev/null; if [ $? -eq 0 ]; then
 export HISTCONTROL="ignoredups"
 
 # I ♥ TextMate
-export EDITOR='mate -w' # -w means wait for TextMate to close the file
+export EDITOR='mate_w' # Shell script that runs mate -w, opening TextMate and wait for it to close the file
 
 # Tweak REE settings for faster tests
 # See http://www.rubyenterpriseedition.com/documentation.html#_garbage_collector_performance_tuning
