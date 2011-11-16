@@ -164,3 +164,6 @@ if [[ -s ~/dotfiles/autojump/.bash_rc ]] ; then source ~/dotfiles/autojump/.bash
 if [ `pwd` == `echo ~` ]; then
 	cd ~/Projects
 fi
+
+
+complete -C "mite auto-complete" mite
