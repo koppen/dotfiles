@@ -14,7 +14,7 @@ export PATH="./bin:$HOME/bin:$PATH"
 # export PS1="\\e[1m\\u@\\h:\\w\\\$\\e[m "
 # Alternative prompt from http://blog.teksol.info/2009/01/12/productivity-tip-a-simple-change-to.html. Puts the git
 # branch name into the prompt.
-export PS1='\n\[\e[1m\]\w\[\e[m\]$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo " (\[\033[00m\]$(git branch | grep ^*|sed s/\*\ \//))"; fi) \n\$\[\033[00m\] '
+export PS1='\[\033[G\n\[\e[1m\]\w\[\e[m\]$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo " (\[\033[00m\]$(git branch | grep ^*|sed s/\*\ \//))"; fi) \n\$\[\033[00m\] '
 
 # Don't store repeated lines in history
 export HISTCONTROL="ignoredups"
