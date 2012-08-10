@@ -30,6 +30,8 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=50000000
 export RUBY_HEAP_FREE_MIN=500000
 
+# Tell Ruby OpenSSL to find certificates installed via MacPorts
+export SSL_CERT_FILE=/opt/local/share/curl/curl-ca-bundle.crt
 
 # Ease on manually debugging REST API services
 alias apicurl="curl -H 'Accept: application/xml' -H 'Content-Type: application/xml' "
@@ -164,6 +166,5 @@ if [[ -s ~/dotfiles/autojump/.bash_rc ]] ; then source ~/dotfiles/autojump/.bash
 if [ `pwd` == `echo ~` ]; then
 	cd ~/Projects
 fi
-
 
 complete -C "mite auto-complete" mite
