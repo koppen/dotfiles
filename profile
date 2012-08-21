@@ -19,8 +19,7 @@ export PS1='\[\033[G\n\[\e[1m\]\w\[\e[m\]$(git branch &>/dev/null; if [ $? -eq 0
 # Don't store repeated lines in history
 export HISTCONTROL="ignoredups"
 
-# I ♥ TextMate
-export EDITOR='mate_w' # Shell script that runs mate -w, opening TextMate and wait for it to close the file
+export EDITOR='subl -w'
 
 # Tweak REE settings for faster tests
 # See http://www.rubyenterpriseedition.com/documentation.html#_garbage_collector_performance_tuning
