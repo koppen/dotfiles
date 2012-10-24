@@ -139,11 +139,8 @@ alias peep_restart='peep_stop; peep_start'
 alias redis_start='/opt/local/bin/redis-server /opt/local/etc/redis.conf'
 
 # Autocompletion for a bunch of stuff
-if [ -f /opt/local/etc/bash_completion ]; then
-  source /opt/local/etc/bash_completion
-fi
-if [ -f /opt/local/etc/bash_completion.d/git ]; then
-  source /opt/local/etc/bash_completion.d/git
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+  source /opt/local/etc/profile.d/bash_completion.sh
 fi
 complete -C ~/dotfiles/tab_completion/rake -o default rake
 complete -C ~/dotfiles/tab_completion/capistrano -o default cap
