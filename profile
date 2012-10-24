@@ -142,6 +142,9 @@ alias redis_start='/opt/local/bin/redis-server /opt/local/etc/redis.conf'
 if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
   source /opt/local/etc/profile.d/bash_completion.sh
 fi
+if [ -f /opt/local/etc/bash_completion.d/git-extras ]; then
+  source /opt/local/etc/bash_completion.d/git-extras
+fi
 complete -C ~/dotfiles/tab_completion/rake -o default rake
 complete -C ~/dotfiles/tab_completion/capistrano -o default cap
 complete -C "mite auto-complete" mite 
