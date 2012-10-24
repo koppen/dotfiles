@@ -147,7 +147,7 @@ if [ -f /opt/local/etc/bash_completion.d/git-extras ]; then
 fi
 complete -C ~/dotfiles/tab_completion/rake -o default rake
 complete -C ~/dotfiles/tab_completion/capistrano -o default cap
-complete -C "mite auto-complete" mite 
+complete -C "mite auto-complete" mite
 
 # RVM
 if [[ -s ~/.rvm/scripts/rvm ]] ; then 
@@ -162,5 +162,3 @@ if [[ -s ~/dotfiles/autojump/.bash_rc ]] ; then source ~/dotfiles/autojump/.bash
 if [ `pwd` == `echo ~` ]; then
 	cd ~/Projects
 fi
-
-complete -C "mite auto-complete" mite
