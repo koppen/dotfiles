@@ -46,9 +46,6 @@ alias pgstop="sudo -u postgres /opt/local/lib/postgresql91/bin/pg_ctl stop -D /o
 alias mysqlstart="sudo /opt/local/share/mysql5/mysql/mysql.server start && ln -s /opt/local/var/run/mysql5/mysqld.sock /tmp/mysql.sock"
 alias mysqlstop="sudo /opt/local/share/mysql5/mysql/mysql.server stop; unlink /tmp/mysql.sock"
 
-# Quicksilver
-alias qsrestart="killall Quicksilver; open /Applications/Quicksilver.app"
-
 # Rails shortcuts
 alias ss='script/server'
 alias sc='script/console'
