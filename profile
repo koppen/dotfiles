@@ -150,9 +150,9 @@ complete -C ~/dotfiles/tab_completion/capistrano -o default cap
 complete -C "mite auto-complete" mite
 
 # RVM
-if [[ -s ~/.rvm/scripts/rvm ]] ; then 
+if [[ -s ~/.rvm/scripts/rvm ]] ; then
 	source ~/.rvm/scripts/rvm
-	rvm use system
+	rvm use 1.9.3
 fi
 
 # Autojump <http://github.com/joelthelion/autojump/downloads>
