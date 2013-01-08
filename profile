@@ -127,10 +127,6 @@ alias git='hub' # https://github.com/defunkt/hub#readme
 # Memcached
 alias memcached_stop="sudo kill \`ps -A | grep /opt/local/bin/memcached | grep -v grep | grep -v daemondo | awk -F ' ' '{print \$1}'\`"
 
-# Sigh, Parallels...
-alias prl_start='sudo killall -CONT prl_disp_service'
-alias prl_stop='sudo killall -STOP prl_disp_service'
-
 alias redis_start='/opt/local/bin/redis-server /opt/local/etc/redis.conf'
 
 # Autocompletion for a bunch of stuff
