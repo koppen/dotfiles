@@ -5,8 +5,8 @@ export LC_CTYPE=en_US.UTF-8
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Standard paths
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-# Set path for PostgreSQL 8.4 usage, installed via MacPorts
-export PATH="/opt/local/lib/postgresql84/bin:$PATH"
+# Set path for PostgreSQL 9 usage, installed via MacPorts
+export PATH="/opt/local/lib/postgresql91/bin:$PATH"
 # Make sure my own small utils are available
 export PATH="./bin:$HOME/bin:$PATH"
 
