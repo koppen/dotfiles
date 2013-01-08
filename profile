@@ -117,7 +117,6 @@ publish () {
 
 # Single command to launch a Rails project
 alias edit_rails='git fetch origin && itab autospec && itab tail -f log/test.log && itab tail -f log/development.log && itab script/server && mate .'
-alias rails3='rvm use 1.8.7%rails3'
 
 # Git helpers
 alias grc='git rebase --continue'
