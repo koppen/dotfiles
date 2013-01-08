@@ -131,11 +131,6 @@ alias memcached_stop="sudo kill \`ps -A | grep /opt/local/bin/memcached | grep -
 alias prl_start='sudo killall -CONT prl_disp_service'
 alias prl_stop='sudo killall -STOP prl_disp_service'
 
-# Sigh, PeepOpen...
-alias peep_start='open /Applications/PeepOpen.app'
-alias peep_stop="kill \`ps ax | grep PeepOpen | grep -v grep | awk -F ' ' '{print \$1}'\`"
-alias peep_restart='peep_stop; peep_start'
-
 alias redis_start='/opt/local/bin/redis-server /opt/local/etc/redis.conf'
 
 # Autocompletion for a bunch of stuff
