@@ -11,10 +11,12 @@ export PATH="/opt/local/lib/postgresql91/bin:$PATH"
 export PATH="./bin:$HOME/bin:$PATH"
 
 # Set a nice prompt
-# export PS1="\\e[1m\\u@\\h:\\w\\\$\\e[m "
-# Alternative prompt from http://blog.teksol.info/2009/01/12/productivity-tip-a-simple-change-to.html. Puts the git
-# branch name into the prompt.
-export PS1='\[\033[G\n\[\e[1m\]\w\[\e[m\]$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo " (\[\033[00m\]$(git branch | grep ^*|sed s/\*\ \//))"; fi) \n\$\[\033[00m\] '
+bold=$(tput bold)
+reset=$(tput sgr0)
+git_branch_name () {
+  git branch &>/dev/null; if [ $? -eq 0 ]; then echo " ($(git branch | grep ^*|sed s/\*\ \//))"; fi
+}
+export PS1='\[$reset\]\n\[$bold\]\w$(git_branch_name)\n\$\[$reset\] '
 
 # Don't store repeated lines in history
 export HISTCONTROL="ignoredups"
