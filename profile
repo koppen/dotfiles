@@ -20,6 +20,8 @@ export PS1='\[$reset\]\n\[$bold\]\w$(git_branch_name)\n\$\[$reset\] '
 
 # Don't store repeated lines in history
 export HISTCONTROL="ignoredups"
+# But store more lines than the default 500
+export HISTSIZE=5000
 
 export EDITOR='subl -w'
 
