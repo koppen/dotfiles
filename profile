@@ -39,7 +39,7 @@ export SSL_CERT_FILE=/opt/local/share/curl/curl-ca-bundle.crt
 # Ease on manually debugging REST API services
 alias apicurl="curl -H 'Accept: application/xml' -H 'Content-Type: application/xml' "
 headers () {
-	curl --silent --output /dev/null -D /tmp/dumped_headers $1 && cat /tmp/dumped_headers && rm /tmp/dumped_headers
+	curl --insecure --silent --output /dev/null -D /tmp/dumped_headers $1 && cat /tmp/dumped_headers && rm /tmp/dumped_headers
 }
 
 # PostgreSQL control
