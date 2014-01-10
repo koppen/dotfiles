@@ -150,7 +150,7 @@ complete -C "mite auto-complete" mite
 # RVM
 if [[ -s ~/.rvm/scripts/rvm ]] ; then
 	source ~/.rvm/scripts/rvm
-	rvm use 1.9.3
+	rvm use 2.0
 fi
 
 # Autojump <http://github.com/joelthelion/autojump/downloads>
