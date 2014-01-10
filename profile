@@ -46,6 +46,9 @@ headers () {
 alias pgstart="sudo -u postgres /opt/local/lib/postgresql91/bin/pg_ctl start -D /opt/local/var/db/postgresql91/defaultdb -l /var/log/postgresql/postgresql.log"
 alias pgstop="sudo -u postgres /opt/local/lib/postgresql91/bin/pg_ctl stop -D /opt/local/var/db/postgresql91/defaultdb"
 
+# Pow
+alias powr="powder link; powder restart"
+
 # MySQL control
 alias mysqlstart="sudo /opt/local/share/mysql5/mysql/mysql.server start && ln -s /opt/local/var/run/mysql5/mysqld.sock /tmp/mysql.sock"
 alias mysqlstop="sudo /opt/local/share/mysql5/mysql/mysql.server stop; unlink /tmp/mysql.sock"
