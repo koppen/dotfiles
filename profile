@@ -7,6 +7,10 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # Set path for PostgreSQL 9 usage, installed via MacPorts
 export PATH="/opt/local/lib/postgresql91/bin:$PATH"
+# Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 # Make sure my own small utils are available
 export PATH="./bin:$HOME/bin:$PATH"
 
