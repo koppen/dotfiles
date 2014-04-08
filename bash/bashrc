@@ -158,7 +158,7 @@ if [[ -s ~/.rvm/scripts/rvm ]] ; then
 fi
 
 # Autojump <http://github.com/joelthelion/autojump/downloads>
-if [[ -s ~/dotfiles/autojump/.bash_rc ]] ; then source ~/dotfiles/autojump/.bash_rc ; fi
+if [[ -s ~/dotfiles/autojump/bash_rc ]] ; then source ~/dotfiles/autojump/bash_rc ; fi
 
 # Go to the Projects folder, probably where I need to start most my terminal sessions
 if [ `pwd` == `echo ~` ]; then
