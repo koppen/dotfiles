@@ -1,0 +1,20 @@
+# Elastic Search control
+alias esstart="sudo launchctl start org.macports.elasticsearch"
+alias esstop="sudo launchctl stop org.macports.elasticsearch"
+alias esrestart="sudo launchctl restart org.macports.elasticsearch"
+
+# Git helpers
+alias gbdm="git branch --delete \`git branch --merged | grep -ve 'master\|develop\|staging\|production' | vipe | xargs\`"
+
+# MySQL control
+alias mysqlstart="sudo /opt/local/lib/mysql56/bin/mysqld_safe &"
+alias mysqlstop="sudo /opt/local/lib/mysql56/bin/mysqladmin shutdown"
+alias mysqlrestart="mysqlstop; mysqlstart"
+
+# PostgreSQL control
+alias pgstart='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper start';
+alias pgstop='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper stop';
+alias pgrestart='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper restart';
+
+# View HTTP headers
+alias headers='curl --head'
