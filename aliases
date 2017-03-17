@@ -18,3 +18,6 @@ alias pgrestart='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-ser
 
 # View HTTP headers
 alias headers='curl --head'
+
+# List processes and what ports they are listening on
+alias wholistens='lsof -iTCP -sTCP:LISTEN -n -P'
