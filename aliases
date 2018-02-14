@@ -12,9 +12,13 @@ alias mysqlstop="sudo /opt/local/lib/mysql56/bin/mysqladmin shutdown"
 alias mysqlrestart="mysqlstop; mysqlstart"
 
 # PostgreSQL control
-alias pgstart='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper start';
-alias pgstop='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper stop';
-alias pgrestart='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper restart';
+alias pgstart9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper start';
+alias pgstop9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper stop';
+alias pgrestart9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper restart';
+
+alias pgstart='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper start';
+alias pgstop='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper stop';
+alias pgrestart='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper restart';
 
 # View HTTP headers
 alias headers='curl --head'
