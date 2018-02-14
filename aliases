@@ -4,7 +4,7 @@ alias esstop="sudo launchctl stop org.macports.elasticsearch"
 alias esrestart="sudo launchctl restart org.macports.elasticsearch"
 
 # Git helpers
-alias gbdm="git branch --delete \`git branch --merged | grep -ve 'master\|develop\|staging\|production' | vipe | xargs\`"
+alias gbdm="git branch --delete \`git branch --merged | grep -ve 'master\|develop\|staging\|production\|*' | vipe | xargs\`"
 
 # MySQL control
 alias mysqlstart="sudo /opt/local/lib/mysql56/bin/mysqld_safe &"
