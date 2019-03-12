@@ -3,8 +3,5 @@
 gem: --no-ri --no-rdoc
 :backtrace: false
 :benchmark: false
-:sources: 
-- http://rubygems.org
-- http://gems.github.com
 :update_sources: true
 :bulk_threshold: 1000
