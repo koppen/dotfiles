@@ -18,11 +18,13 @@ alias mysqlstop57="sudo launchctl unload -w /Library/LaunchDaemons/org.macports.
 alias mysqlrestart57="mysqlstop; mysqlstart"
 
 # PostgreSQL control
-alias pgstart9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper start';
+alias pgselect9='sudo port select postgresql postgresql94'
+alias pgstart9='pgselect9; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper start';
 alias pgstop9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper stop';
 alias pgrestart9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper restart';
 
-alias pgstart='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper start';
+alias pgselect10='sudo port select postgresql postgresql10'
+alias pgstart='pgselect10; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper start';
 alias pgstop='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper stop';
 alias pgrestart='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper restart';
 
