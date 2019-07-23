@@ -7,9 +7,15 @@ alias esrestart="sudo launchctl restart org.macports.elasticsearch"
 alias gbdm="git branch --delete \`git branch --merged | grep -ve 'master\|develop\|staging\|production\|*' | vipe | xargs\`"
 
 # MySQL control
-alias mysqlstart="sudo /opt/local/lib/mysql56/bin/mysqld_safe &"
-alias mysqlstop="sudo /opt/local/lib/mysql56/bin/mysqladmin shutdown"
+alias mysqlselect56="sudo port select mysql mysql56"
+alias mysqlstart="mysqlselect56; sudo launchctl load -w /Library/LaunchDaemons/org.macports.mysql56-server.plist"
+alias mysqlstop="sudo launchctl unload -w /Library/LaunchDaemons/org.macports.mysql56-server.plist"
 alias mysqlrestart="mysqlstop; mysqlstart"
+
+alias mysqlselect57="sudo port select mysql mysql57"
+alias mysqlstart57="mysqlselect57; sudo launchctl load -w /Library/LaunchDaemons/org.macports.mysql57-server.plist"
+alias mysqlstop57="sudo launchctl unload -w /Library/LaunchDaemons/org.macports.mysql57-server.plist"
+alias mysqlrestart57="mysqlstop; mysqlstart"
 
 # PostgreSQL control
 alias pgstart9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper start';
