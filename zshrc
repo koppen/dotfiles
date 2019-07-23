@@ -19,3 +19,7 @@ export PATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/:$P
 # Use Sublime Text when possible
 export VISUAL='subl -w'
 
+# asdf-vm for version managing all the things!
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+export PATH="~/.asdf/shims:$PATH"
