@@ -23,3 +23,5 @@ export VISUAL='subl -w'
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 export PATH="~/.asdf/shims:$PATH"
+
+plugins=(aws git gitfast git-prompt rvm sublime thefuck zsh_reload)
