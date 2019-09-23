@@ -14,7 +14,7 @@ export GRADLE_HOME=/opt/local/share/java/gradle
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/
 
 # Use Python commands
-export PATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/:$PATH"
+export PATH="/opt/local/Library/Frameworks/Python.framework/Versions/3.7/bin/:$PATH"
 
 # Use Sublime Text when possible
 export VISUAL='subl -w'
