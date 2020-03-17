@@ -28,6 +28,16 @@ alias pgstart='pgselect10; sudo /opt/local/etc/LaunchDaemons/org.macports.postgr
 alias pgstop='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper stop';
 alias pgrestart='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper restart';
 
+alias pgselect11='sudo port select postgresql postgresql11'
+alias pgstart11='pgselect11; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql11-server/postgresql11-server.wrapper start';
+alias pgstop11='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql11-server/postgresql11-server.wrapper stop';
+alias pgrestart11='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql11-server/postgresql11-server.wrapper restart';
+
+alias pgselect12='sudo port select postgresql postgresql12'
+alias pgstart12='pgselect12; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper start';
+alias pgstop12='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper stop';
+alias pgrestart12='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper restart';
+
 # View HTTP headers
 alias headers='curl --head'
 
