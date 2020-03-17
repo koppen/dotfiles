@@ -41,5 +41,8 @@ alias pgrestart12='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-s
 # View HTTP headers
 alias headers='curl --head'
 
+# PG13 commands
+alias that=fuck
+
 # List processes and what ports they are listening on
 alias wholistens='lsof -iTCP -sTCP:LISTEN -n -P'
