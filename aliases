@@ -24,9 +24,9 @@ alias pgstop9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-serve
 alias pgrestart9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper restart';
 
 alias pgselect10='sudo port select postgresql postgresql10'
-alias pgstart='pgselect10; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper start';
-alias pgstop='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper stop';
-alias pgrestart='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper restart';
+alias pgstart10='pgselect10; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper start';
+alias pgstop10='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper stop';
+alias pgrestart10='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper restart';
 
 alias pgselect11='sudo port select postgresql postgresql11'
 alias pgstart11='pgselect11; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql11-server/postgresql11-server.wrapper start';
