@@ -16,8 +16,9 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
 # Use Python commands
 export PATH="/opt/local/Library/Frameworks/Python.framework/Versions/3.7/bin/:$PATH"
 
-# Use Sublime Text when possible
-export VISUAL='subl -w'
+# Use VS Code when possible
+# export VISUAL='subl -w'
+export VISUAL='code --wait'
 
 # asdf-vm for version managing all the things!
 . $HOME/.asdf/asdf.sh
