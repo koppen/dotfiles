@@ -25,3 +25,6 @@ export VISUAL='code --wait'
 export PATH="~/.asdf/shims:$PATH"
 
 plugins=(aws git gitfast git-prompt rvm sublime thefuck zsh_reload)
+
+# Load secrets
+[[ -f ~/.env.secrets ]] && source ~/.env.secrets
