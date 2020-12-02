@@ -18,6 +18,10 @@ alias mysqlstop57="sudo launchctl unload -w /Library/LaunchDaemons/org.macports.
 alias mysqlrestart57="mysqlstop57; mysqlstart57"
 
 # PostgreSQL control
+
+# Stops the currently running postgres process
+alias pgstop="`ps -A | grep \[b\]in/postgres | sed -E 's/.+postgresql([0-9]{2}).+/pgstop\1/g'`"
+
 alias pgselect9='sudo port select postgresql postgresql94'
 alias pgstart9='pgselect9; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper start';
 alias pgstop9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper stop';
