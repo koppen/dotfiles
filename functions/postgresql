@@ -5,58 +5,62 @@ function pgstop {
   `pgstop$version`
 };
 
+alias pg9_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper"
 function pgrestart9 {
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper restart
+  pg9_server restart
 };
 function pgselect9 {
   sudo port select postgresql postgresql94
 };
 function pgstart9 {
   pgselect9
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper start
+  pg9_server start
 };
 function pgstop9 {
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper stop
+  pg9_server stop
 };
 
+alias pg10_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper"
 function pgrestart10 {
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper restart
+  pg10_server restart
 };
 function pgselect10 {
   sudo port select postgresql postgresql10
 };
 function pgstart10 {
   pgselect10
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper start
+  pg10_server start
 };
 function pgstop10 {
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper stop
+  pg10_server stop
 };
 
+alias pg11_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql11-server/postgresql11-server.wrapper"
 function pgrestart11 {
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql11-server/postgresql11-server.wrapper restart
+  pg11_server restart
 };
 function pgselect11 {
   sudo port select postgresql postgresql11
 };
 function pgstart11 {
   pgselect11
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql11-server/postgresql11-server.wrapper start
+  pg11_server start
 };
 function pgstop11 {
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql11-server/postgresql11-server.wrapper stop
+  pg11_server stop
 };
 
+alias pg12_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper"
 function pgrestart12 {
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper restart
+  sudo pg12_server restart
 };
 function pgselect12 {
   sudo port select postgresql postgresql12
 };
 function pgstart12 {
   pgselect12
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper start
+  sudo pg12_server start
 };
 function pgstop12 {
-  sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper stop
+  sudo pg12_server stop
 };
