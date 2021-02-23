@@ -1,4 +1,4 @@
-source functions/postgresql
+source ~/dotfiles.local/functions/postgresql
 
 # Elastic Search control
 alias esstart="sudo launchctl start org.macports.elasticsearch"
