@@ -1,3 +1,5 @@
+source functions/postgresql
+
 # Elastic Search control
 alias esstart="sudo launchctl start org.macports.elasticsearch"
 alias esstop="sudo launchctl stop org.macports.elasticsearch"
@@ -18,29 +20,6 @@ alias mysqlstop57="sudo launchctl unload -w /Library/LaunchDaemons/org.macports.
 alias mysqlrestart57="mysqlstop57; mysqlstart57"
 
 # PostgreSQL control
-
-# Stops the currently running postgres process
-alias pgstop="`ps -A | grep \[b\]in/postgres | sed -E 's/.+postgresql([0-9]{2}).+/pgstop\1/g'`"
-
-alias pgselect9='sudo port select postgresql postgresql94'
-alias pgstart9='pgselect9; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper start';
-alias pgstop9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper stop';
-alias pgrestart9='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper restart';
-
-alias pgselect10='sudo port select postgresql postgresql10'
-alias pgstart10='pgselect10; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper start';
-alias pgstop10='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper stop';
-alias pgrestart10='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper restart';
-
-alias pgselect11='sudo port select postgresql postgresql11'
-alias pgstart11='pgselect11; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql11-server/postgresql11-server.wrapper start';
-alias pgstop11='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql11-server/postgresql11-server.wrapper stop';
-alias pgrestart11='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql11-server/postgresql11-server.wrapper restart';
-
-alias pgselect12='sudo port select postgresql postgresql12'
-alias pgstart12='pgselect12; sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper start';
-alias pgstop12='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper stop';
-alias pgrestart12='sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper restart';
 
 # View HTTP headers
 alias headers='curl --head'
