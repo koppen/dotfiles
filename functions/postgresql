@@ -52,15 +52,15 @@ function pgstop11 {
 
 alias pg12_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper"
 function pgrestart12 {
-  sudo pg12_server restart
+  pg12_server restart
 };
 function pgselect12 {
   sudo port select postgresql postgresql12
 };
 function pgstart12 {
   pgselect12
-  sudo pg12_server start
+  pg12_server start
 };
 function pgstop12 {
-  sudo pg12_server stop
+  pg12_server stop
 };
