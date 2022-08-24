@@ -14,7 +14,7 @@ export GRADLE_HOME=/opt/local/share/java/gradle
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/
 
 # Use Python commands
-export PATH="$HOME/Library/Python/3.9/bin:/opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/:$PATH"
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
 # Use VS Code when possible
 export VISUAL='code --new-window --wait'
