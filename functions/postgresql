@@ -59,3 +59,22 @@ function pgstart13 {
 function pgstop13 {
   pg13_server stop
 };
+
+alias pg14_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql14-server/postgresql14-server.wrapper"
+function pgrestart14 {
+  cd /
+  pg14_server restart
+  cd -
+};
+function pgselect14 {
+  sudo port select postgresql postgresql14
+};
+function pgstart14 {
+  pgselect14
+  cd /
+  pg14_server start
+  cd -
+};
+function pgstop14 {
+  pg13_server stop
+};
