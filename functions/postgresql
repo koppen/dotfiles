@@ -5,12 +5,12 @@ function pgstop {
   `pgstop$version`
 };
 
-alias pg9_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql94-server/postgresql94-server.wrapper"
+alias pg9_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql96-server/postgresql96-server.wrapper"
 function pgrestart9 {
   pg9_server restart
 };
 function pgselect9 {
-  sudo port select postgresql postgresql94
+  sudo port select postgresql postgresql96
 };
 function pgstart9 {
   pgselect9
