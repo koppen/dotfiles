@@ -5,21 +5,21 @@ function pgstop {
   `pgstop$version`
 };
 
-alias pg9_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql96-server/postgresql96-server.wrapper"
-function pgrestart9 {
-  pg9_server restart
+alias pg96_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql96-server/postgresql96-server.wrapper"
+function pgrestart96 {
+  pg96_server restart
 };
-function pgselect9 {
+function pgselect96 {
   sudo port select postgresql postgresql96
 };
-function pgstart9 {
-  pgselect9
+function pgstart96 {
+  pgselect96
   cd /
-  pg9_server start
+  pg96_server start
   cd -
 };
-function pgstop9 {
-  pg9_server stop
+function pgstop96 {
+  pg96_server stop
 };
 
 alias pg10_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql10-server/postgresql10-server.wrapper"
