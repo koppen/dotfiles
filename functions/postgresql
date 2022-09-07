@@ -7,19 +7,23 @@ function pgstop {
 
 alias pg96_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql96-server/postgresql96-server.wrapper"
 function pgrestart96 {
+  cd /
   pg96_server restart
+  cd -
 };
 function pgselect96 {
   sudo port select postgresql postgresql96
 };
 function pgstart96 {
-  pgselect96
   cd /
+  pgselect96
   pg96_server start
   cd -
 };
 function pgstop96 {
+  cd /
   pg96_server stop
+  cd -
 };
 
 alias pg12_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql12-server/postgresql12-server.wrapper"
@@ -32,13 +36,15 @@ function pgselect12 {
   sudo port select postgresql postgresql12
 };
 function pgstart12 {
-  pgselect12
   cd /
+  pgselect12
   pg12_server start
   cd -
 };
 function pgstop12 {
+  cd /
   pg12_server stop
+  cd -
 };
 
 alias pg13_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql13-server/postgresql13-server.wrapper"
@@ -51,13 +57,15 @@ function pgselect13 {
   sudo port select postgresql postgresql13
 };
 function pgstart13 {
-  pgselect13
   cd /
+  pgselect13
   pg13_server start
   cd -
 };
 function pgstop13 {
+  cd /
   pg13_server stop
+  cd -
 };
 
 alias pg14_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql14-server/postgresql14-server.wrapper"
@@ -70,11 +78,13 @@ function pgselect14 {
   sudo port select postgresql postgresql14
 };
 function pgstart14 {
-  pgselect14
   cd /
+  pgselect14
   pg14_server start
   cd -
 };
 function pgstop14 {
+  cd /
   pg13_server stop
+  cd -
 };
