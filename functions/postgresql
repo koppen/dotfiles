@@ -2,7 +2,13 @@
 
 function pgstop {
   local version=`ps -A | grep \[b\]in/postgres | sed -E "s/.+postgresql([0-9]{2}).+/\1/g"`
-  `pgstop$version`
+  if [ -z "$version" ]; then
+    echo "Found no running PostgreSQL server"
+    return 1
+  else
+    local command="pgstop$version"
+    echo $($command)
+  fi
 };
 
 alias pg96_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql96-server/postgresql96-server.wrapper"
