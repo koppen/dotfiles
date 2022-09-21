@@ -1,5 +1,14 @@
 # PostgreSQL control
 
+function pgstatus {
+  local version=`ps -A | grep \[b\]in/postgres | sed -E "s/.+postgresql([0-9]{2}).+/\1/g"`
+  if [ -z "$version" ]; then
+    echo "Found no running PostgreSQL server"
+  else
+    echo "PostgreSQL $version is running"
+  fi
+}
+
 function pgstop {
   local version=`ps -A | grep \[b\]in/postgres | sed -E "s/.+postgresql([0-9]{2}).+/\1/g"`
   if [ -z "$version" ]; then
