@@ -9,9 +9,8 @@ SSL_CERT_FILE=/opt/local/share/curl/curl-ca-bundle.crt
 
 setopt no_share_history
 
-# Java (for Minecraft mods)
-export GRADLE_HOME=/opt/local/share/java/gradle
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/
+# Java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home//Library/Java/JavaVirtualMachines/openjdk17-zulu/Contents/Home
 
 # Use Python commands
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
