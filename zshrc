@@ -22,7 +22,7 @@ export VISUAL='code --new-window --wait'
 . $HOME/.asdf/asdf.sh
 export PATH="~/.asdf/shims:$PATH"
 
-plugins=(aws git gitfast git-prompt rvm sublime thefuck)
+plugins=(aws git gitfast git-prompt git-trim rvm sublime thefuck)
 
 # Load secrets
 [[ -f ~/.env.secrets ]] && source ~/.env.secrets
