@@ -103,3 +103,25 @@ function pgstop14 {
   pg14_server stop
   cd -
 };
+
+
+alias pg15_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql15-server/postgresql15-server.wrapper"
+function pgrestart15 {
+  cd /
+  pg15_server restart
+  cd -
+};
+function pgselect15 {
+  sudo port select postgresql postgresql15
+};
+function pgstart15 {
+  cd /
+  pgselect15
+  pg15_server start
+  cd -
+};
+function pgstop15 {
+  cd /
+  pg15_server stop
+  cd -
+};
