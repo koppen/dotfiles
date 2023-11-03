@@ -26,3 +26,7 @@ plugins=(aws git gitfast git-prompt git-trim rvm sublime thefuck)
 
 # Load secrets
 [[ -f ~/.env.secrets ]] && source ~/.env.secrets
+
+# Use direnv to load ENV from .envrc in directories
+# https://direnv.net/docs/hook.html
+eval "$(direnv hook zsh)"
