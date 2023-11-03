@@ -19,8 +19,6 @@ alias mysqlstart57="mysqlselect57; sudo launchctl load -w /Library/LaunchDaemons
 alias mysqlstop57="sudo launchctl unload -w /Library/LaunchDaemons/org.macports.mysql57-server.plist"
 alias mysqlrestart57="mysqlstop57; mysqlstart57"
 
-# PostgreSQL control
-
 # View HTTP headers
 alias headers='curl --head'
 
