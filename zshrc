@@ -18,6 +18,9 @@ export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 # Use VS Code when possible
 export VISUAL='code --new-window --wait'
 
+# Use mise
+eval "$(/Users/jakob/.local/bin/mise activate zsh)"
+
 # asdf-vm for version managing all the things!
 . $HOME/.asdf/asdf.sh
 export PATH="~/.asdf/shims:$PATH"
