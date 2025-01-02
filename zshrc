@@ -21,10 +21,6 @@ export VISUAL='code --new-window --wait'
 # Use mise
 eval "$(/Users/jakob/.local/bin/mise activate zsh)"
 
-# asdf-vm for version managing all the things!
-. $HOME/.asdf/asdf.sh
-export PATH="~/.asdf/shims:$PATH"
-
 plugins=(aws git gitfast git-prompt git-trim sublime thefuck)
 
 # Load secrets
