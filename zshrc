@@ -25,7 +25,7 @@ eval "$(/Users/jakob/.local/bin/mise activate zsh)"
 . $HOME/.asdf/asdf.sh
 export PATH="~/.asdf/shims:$PATH"
 
-plugins=(aws git gitfast git-prompt git-trim rvm sublime thefuck)
+plugins=(aws git gitfast git-prompt git-trim sublime thefuck)
 
 # Load secrets
 [[ -f ~/.env.secrets ]] && source ~/.env.secrets
