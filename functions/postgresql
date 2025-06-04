@@ -125,3 +125,45 @@ function pgstop15 {
   pg15_server stop
   cd -
 };
+
+alias pg16_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql16-server/postgresql16-server.wrapper"
+function pgrestart16 {
+  cd /
+  pg16_server restart
+  cd -
+};
+function pgselect16 {
+  sudo port select postgresql postgresql16
+};
+function pgstart16 {
+  cd /
+  pgselect16
+  pg16_server start
+  cd -
+};
+function pgstop16 {
+  cd /
+  pg16_server stop
+  cd -
+};
+
+alias pg17_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql17-server/postgresql17-server.wrapper"
+function pgrestart17 {
+  cd /
+  pg17_server restart
+  cd -
+};
+function pgselect17 {
+  sudo port select postgresql postgresql17
+};
+function pgstart17 {
+  cd /
+  pgselect17
+  pg17_server start
+  cd -
+};
+function pgstop17 {
+  cd /
+  pg17_server stop
+  cd -
+};
