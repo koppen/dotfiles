@@ -1,5 +1,8 @@
 source ~/dotfiles.local/functions/postgresql
 
+# Bundler
+alias bi="bundle install"
+
 # Elastic Search control
 alias esstart="sudo launchctl start org.macports.elasticsearch"
 alias esstop="sudo launchctl stop org.macports.elasticsearch"
