@@ -9,7 +9,9 @@ SSL_CERT_FILE=/opt/local/share/curl/curl-ca-bundle.crt
 
 setopt no_share_history
 
-# Java
+# Docker
+export DOCKER_CLI_HINTS=false
+
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home//Library/Java/JavaVirtualMachines/openjdk17-zulu/Contents/Home
 
 # Use Python commands
