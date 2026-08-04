@@ -25,3 +25,6 @@ alias that=fuck
 
 # List processes and what ports they are listening on
 alias wholistens='lsof -iTCP -sTCP:LISTEN -n -P'
+
+# 1Password/AWS integration
+source ~/.config/op/plugins.sh
