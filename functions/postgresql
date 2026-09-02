@@ -167,3 +167,24 @@ function pgstop17 {
   pg17_server stop
   cd -
 };
+
+alias pg18_server="sudo /opt/local/etc/LaunchDaemons/org.macports.postgresql18-server/postgresql18-server.wrapper"
+function pgrestart18 {
+  cd /
+  pg18_server restart
+  cd -
+};
+function pgselect18 {
+  sudo port select postgresql postgresql18
+};
+function pgstart18 {
+  cd /
+  pgselect18
+  pg18_server start
+  cd -
+};
+function pgstop18 {
+  cd /
+  pg18_server stop
+  cd -
+};
